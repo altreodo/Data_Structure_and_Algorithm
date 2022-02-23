@@ -11,7 +11,7 @@ q.push(ar[y]);
 q.pop();
 }
 while(q.size()>0){
-    cout<<q.top()<<" ";
+    cout<<q.top()<<" ";4
     q.pop();
 }
 //return q.top();

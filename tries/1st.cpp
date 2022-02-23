@@ -46,9 +46,18 @@ bool searchr(Trienode * root,string word){
     if(root->children[index]==NULL){
         return false;
     }
-    bool op=searchr(root->children[index],word.substr(1));
-    if(op)return true;
-    return false;
+    return searchr(root->children[index],word.substr(1));
+}
+void remove(Trienode* root,string word){
+    if(word.length()==0){
+    root->isterminal=false;
+    return ;
+    }
+    int index=word[0]-'a';
+    if(root->children[index]==NULL){
+        return;
+    }
+    remove( root->children[index], word.substr(1));
 }
 };
 int main(){
