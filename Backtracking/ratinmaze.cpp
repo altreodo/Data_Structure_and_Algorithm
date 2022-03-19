@@ -1,50 +1,52 @@
 #include<bits/stdc++.h>
 using namespace std;
-void backt(int **ar,int n,int m,int i,int j){
-    if(i==n-1 && j==m-1 ){
-        return ;
+bool issafe(int**ar,int i,int j){
+    if(ar[i][j]==0){
+        return false;
     }
-    if(i>=n || j>=m){
-        return;
+    return true;
+}
+bool backtr(int**ar,vector<vector<int>>&v,int i,int j){
+    if(i>=v.size()|| j>=v[0].size()){
+        return false;
+    }if(i==v.size()-1 && j==v[0].size()-1 && ar[i][j]==1){
+        v[i][j]=1;
+        return true;
     }
-    if(ar[i][j]==0 ){
-     return ;
-    }
-    if(i<n-1 & j<m-1 ){
-        if(ar[i+1][j]==0 && ar[i][j+1]==0){
-            ar[i][j]=0;
-            return;
+    if(issafe(ar,i,j)){
+        v[i][j]=1;
+        if(backtr(ar,v,i+1,j)){
+            return true;
         }
+        if(backtr(ar,v,i,j+1)){
+            return true;
+        }
+        v[i][j]=0;
     }
-    if(i==n-1 && ar[i][j+1]==0){
-    ar[i][j]=0;
-    return ;
-    }
-    if(j==m-1 && ar[i+1][j]==0){
-    ar[i][j]=0;
-    return ;
-    }
-    backt(ar,n,m,i+1,j);
-    backt(ar,n,m,i,j+1);
+    return false;
 }
 int main(){
-int n, m;
+int n,m;
 cin>>n>>m;
 int **ar=new int*[n];
 for(int y=0;y<n;y++){
-    ar[y]=new int[m];
-    for(int x=0;x<m;x++){
-        cin>>ar[y][x];
-    }
+ar[y]=new int[m];
+for(int u=0;u<m;u++){
+cin>>ar[y][u];
 }
-backt(ar,n,m,0,0);
-cout<<"ans"<<endl;
+}
+vector<vector<int>>v;
+v.resize(n,vector<int>(m,0));
+if(backtr(ar,v,0,0)){
+    cout<<"Path of rat"<<endl;
 for(int y=0;y<n;y++){
-    //ar[y]=new int[m];
-    for(int x=0;x<m;x++){
-        cout<<ar[y][x]<<" ";
-    }
-    cout<<endl;
+for(int u=0;u<m;u++){
+cout<<v[y][u]<<" ";
+}
+cout<<endl;
+}
+}else{
+    cout<<"Rat cant reach his position"<<endl;
 }
 return 0;
 }
