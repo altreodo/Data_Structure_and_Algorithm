@@ -10,11 +10,11 @@ for(int y=k;y<n;y++){
 q.push(ar[y]);
 q.pop();
 }
-while(q.size()>0){
-    cout<<q.top()<<" ";
-    q.pop();
-}
-//return q.top();
+// while(q.size()>1){
+//     //cout<<q.top()<<" ";
+//     q.pop();
+// }
+cout<< q.top();
 }
 int main(){
 int n,k;
