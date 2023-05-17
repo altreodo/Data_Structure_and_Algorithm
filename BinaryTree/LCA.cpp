@@ -10,6 +10,11 @@ Binarytree(int data){
     this->data=data;
 }
 };
+
+
+
+
+
 Binarytree<int>* takeinput(){
 queue<Binarytree<int>*>q;
 int data;

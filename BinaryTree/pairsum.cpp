@@ -16,6 +16,8 @@ int data;
 cin>>data;
 Binarytree<int>*root=new Binarytree<int>(data);
 q.push(root);
+
+
 while(!q.empty()){
     Binarytree<int>* head=q.front();
     q.pop();

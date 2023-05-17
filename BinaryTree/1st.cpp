@@ -16,7 +16,7 @@ class Binarytree{
         delete right;
     }
 };
-//non level wise
+// non level wise
 // Binarytree<int>*takeinput(){
 //     int rootdata;
 //     cout<<"enter the data ";
@@ -31,7 +31,9 @@ class Binarytree{
 //     root->right=rightchild;
 //     return root;
 // }
-//level wise
+// level wise
+
+
 Binarytree<int>* takeinput(){
     queue<Binarytree<int>*>q;
     int rootdata;

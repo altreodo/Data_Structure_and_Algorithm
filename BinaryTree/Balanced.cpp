@@ -16,6 +16,16 @@ class Binarytree{
         delete right;
     }
 };
+
+
+
+
+
+
+
+
+
+
 Binarytree<int>* takeinput(){
     queue<Binarytree<int>*>q;
     int rootdata;
