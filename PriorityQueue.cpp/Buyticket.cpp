@@ -21,6 +21,10 @@ qr.pop();
 qr.push(m);
 }else{
     count++;
+
+
+
+    
     qr.pop();
     q.pop();
 }

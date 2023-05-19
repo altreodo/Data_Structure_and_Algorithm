@@ -12,6 +12,10 @@ int getter(int a,int b,int i){
     }
     return getter(a,b,i+1)+getter(total,b,i+1);
 }
+
+
+
+
 int main(){
 int a,b;
 cin>>a>>b;

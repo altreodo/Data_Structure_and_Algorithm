@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 //#define MOD 100000007
+//define op 1882912
 int dp[100001]={0};
 int get(int i){
 if(i==1){
@@ -19,6 +20,10 @@ int y=get(i-2);
 int temp1=(int)(((long)(x)*x)%MOD);
 int temp2=(int)((2*(long)(x)*y)%MOD);
 dp[i]=(temp1+temp2)%MOD;
+
+
+
+
 return dp[i];
 }
 int main(){

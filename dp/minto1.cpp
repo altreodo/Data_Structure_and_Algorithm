@@ -13,6 +13,15 @@ int countStepsToOne(int n) {
     return dp[n];
     }
     if(n%2==0){
+
+
+
+
+
+
+
+
+        
          k=countStepsToOne(n/2);
     }
     l=countStepsToOne(n-1);

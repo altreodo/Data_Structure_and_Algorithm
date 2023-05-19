@@ -10,6 +10,11 @@ for(int y=0;y<n;y++){
     op[ar[y]]++;
 }
 int o;
+
+
+
+
+
 cin>>o;
 int br[o];
 for(int u=0;u<o;u++){
