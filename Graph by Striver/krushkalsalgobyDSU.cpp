@@ -9,7 +9,7 @@ DSU(int n){
     rank.resize(n,0);
 for(int y=0;y<n;y++){
     parent[y]=y;
-    //rank[y]=0;
+    rank[y]=0;
     }
 }
 int getparent(int u){
