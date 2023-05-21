@@ -10,7 +10,7 @@ cin>>u>>v;
 edges[u].push_back(v);
 edges[v].push_back(u);
 }
-vector<int>vis(n+1,0);
+vector<int>vis(n+2,0);
 for(int y=1;y<=n;y++){
     if(!vis[y]){
         vis[y]=1;

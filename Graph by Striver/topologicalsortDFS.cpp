@@ -17,6 +17,10 @@ s.push(i);
 int main(){
 int n,e;
 cin>>n>>e;
+
+
+
+
 vector<vector<int>>edges(n);
 for(int y=0;y<n;y++){
 int u,v;
