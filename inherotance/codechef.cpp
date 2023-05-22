@@ -3,7 +3,7 @@
 using namespace std;
 long long int res(long long int n,long long int e,long long int h,long long int a,long long int b,long long int c);
 long long int minv(long long int a,long long int b);
-long long maxv(long long int a,long long int b);
+long long maxv(           long long int a,long long int b);
 
 int main() {
     long long t;
@@ -22,6 +22,10 @@ int main() {
         
     }
 }
+
+
+
+
 long long int res(long long n,long long e,long long h,long long a,long long b,long long c){
     if(n<=0)
 {
